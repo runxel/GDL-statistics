@@ -27,7 +27,6 @@ def readXML(file_path):
     tree = etree.parse(file_path, parser)
     root = tree.getroot()
 
-    # macroname_list = root.findall(".//Value")
     xml_list = root.xpath(".//PenColor/Value")
 
     for i in xml_list:
@@ -64,8 +63,8 @@ for dir_ in os.scandir(PATH):
         itemCount = Counter(allPenColors)
         mostCommon = itemCount.most_common()  # lists all
 
-        with open(os.path.join(pathToFile, f'ac24_pencolors_{dir_num}_{dir_name}.txt'), 'w') as f:
-            f.write("Anzahl\t\tStiftnummer")
+        with open(os.path.join(pathToFile, 'ac24', f'ac24_pencolors_{dir_num}_{dir_name}.txt'), 'w') as f:
+            f.write("Anzahl\t\tStiftnummer\n")
             for item in mostCommon:
                 f.write(f"{item[1]}\t\t{item[0]}\n")
 
