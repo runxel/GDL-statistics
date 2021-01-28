@@ -1,0 +1,10 @@
+# .gitattributes
+*	    text=auto
+
+# gdl files should display properly everywhere
+*.gdl  text eol=crlf
+
+# truly binary; should not be modified
+*.png  binary
+*.jpg  binary
+*.gsm  binary

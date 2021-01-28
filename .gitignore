@@ -1,0 +1,8 @@
+# .gitignore
+*.lnk
+*.url
+
+# IDE stuff
+*.sublime-*
+*.code-workspace
+.vscode
