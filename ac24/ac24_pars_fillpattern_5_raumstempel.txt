@@ -1,0 +1,14 @@
+2		fillType_50
+2		fillType_100
+2		fillType_200
+2		fillType_0
+2		typeFillMarker1
+2		typeFillMarker2
+1		gs_fill_type
+1		ftBackground
+1		fill1
+1		fill2
+1		fill3
+1		fill4
+1		fill5
+1		gs_fill_background

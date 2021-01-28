@@ -1,0 +1,5 @@
+2		apartmentIDangle_50
+2		apartmentIDangle_100
+2		apartmentIDangle_200
+2		apartmentIDangle_0
+2		rotAngle

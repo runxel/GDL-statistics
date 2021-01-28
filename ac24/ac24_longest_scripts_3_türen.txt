@@ -1,0 +1,10 @@
+    964 ./3.02 Innentüren 24/Tür Segm 2-Fl 24/scripts/3d.gdl
+    810 ./3.02 Innentüren 24/Tür Segm 1-Fl 24/scripts/3d.gdl
+    803 ./3.02 Innentüren 24/Tür Ol 2-Fl 2S 24/scripts/3d.gdl
+    776 ./3.03 Schiebe- und Falttüren 24/Schiebetür 02 2-Fl 24/scripts/3d.gdl
+    763 ./3.02 Innentüren 24/Tür Ol 2-Fl 1S 24/scripts/3d.gdl
+    760 ./3.02 Innentüren 24/Zargentür 2-Fl 24/scripts/3d.gdl
+    744 ./3.03 Schiebe- und Falttüren 24/Schiebetür 03 3-Fl 24/scripts/3d.gdl
+    737 ./3.05 Tore 24/Sektionaltor 24/scripts/ui.gdl
+    714 ./3.03 Schiebe- und Falttüren 24/Schiebetür 03 4-Fl 24/scripts/3d.gdl
+    701 ./3.02 Innentüren 24/Tür Ol 2-Fl 24/scripts/3d.gdl

@@ -1,0 +1,10 @@
+   5880 ./2.01 Rechteckfenster 24/Kombi-Fenster 3-Fl 24/scripts/3d.gdl
+   4284 ./2.01 Rechteckfenster 24/4-Flügelfenster 2+2 24/scripts/3d.gdl
+   3906 ./2.01 Rechteckfenster 24/Kombi-Fenster 2-Fl 24/scripts/3d.gdl
+   3902 ./2.01 Rechteckfenster 24/2-Flügelfenster 1+1 24/scripts/3d.gdl
+   3635 ./2.01 Rechteckfenster 24/5-Flügelfenster 24/scripts/3d.gdl
+   3469 ./2.01 Rechteckfenster 24/3-Flügelfenster 2+1 24/scripts/3d.gdl
+   3220 ./2.01 Rechteckfenster 24/4-Flügelfenster 24/scripts/3d.gdl
+   3024 ./2.03 Altbaufenster 24/F Altbau 3-Fl 24/scripts/3d.gdl
+   2930 ./2.01 Rechteckfenster 24/2-Flügelfenster KS 24/scripts/3d.gdl
+   2835 ./2.01 Rechteckfenster 24/Kombi-Fenster 1-Fl 24/scripts/3d.gdl

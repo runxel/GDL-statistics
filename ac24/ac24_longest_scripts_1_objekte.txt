@@ -1,0 +1,10 @@
+   55481 ./1.03 Aussenbereich und Staffage 24/Fahrzeuge 24/PKW 2 24/scripts/3d.gdl
+   36442 ./1.03 Aussenbereich und Staffage 24/Menschen 24/Mann sitzend 1 24/scripts/3d.gdl
+   35709 ./1.03 Aussenbereich und Staffage 24/Menschen 24/Mann sitzend 2 24/scripts/3d.gdl
+   33806 ./1.03 Aussenbereich und Staffage 24/Menschen 24/Frau sitzend 24/scripts/3d.gdl
+   31579 ./1.03 Aussenbereich und Staffage 24/Fahrzeuge 24/PKW 1 24/scripts/3d.gdl
+   20429 ./1.03 Aussenbereich und Staffage 24/Fahrzeuge 24/Motorboot 1 24/scripts/3d.gdl
+   19211 ./1.03 Aussenbereich und Staffage 24/Menschen 24/Mann auf Fahrrad 24/scripts/3d.gdl
+   19168 ./1.03 Aussenbereich und Staffage 24/Menschen 24/Frau auf Fahrrad 24/scripts/3d.gdl
+   17463 ./1.03 Aussenbereich und Staffage 24/Fahrzeuge 24/Motorboot 2 24/scripts/3d.gdl
+   13976 ./1.03 Aussenbereich und Staffage 24/Fahrzeuge 24/LKW 2 24/scripts/3d.gdl
