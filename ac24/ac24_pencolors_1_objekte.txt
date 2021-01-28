@@ -1,4 +1,5 @@
-Anzahl		Stiftnummer4010		91
+Anzahl		Stiftnummer
+4010		91
 3862		1
 1852		19
 564		2

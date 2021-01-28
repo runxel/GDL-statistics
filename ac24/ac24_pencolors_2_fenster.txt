@@ -1,4 +1,5 @@
-Anzahl		Stiftnummer3054		1
+Anzahl		Stiftnummer
+3054		1
 2892		19
 1012		2
 282		3

@@ -2,6 +2,9 @@
 *.lnk
 *.url
 
+# don't follow the symlink to the lib (git considers symlinks as files, so no / at the end)
+**/HSF 24
+
 # IDE stuff
 *.sublime-*
 *.code-workspace
