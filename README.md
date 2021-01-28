@@ -26,10 +26,10 @@ Im Gegensatz zu Revit Familien basieren GDL Objekte rein auf Code und komprimier
 Beschreibung | • | Bash Befehl
 --- | --- | ---
 [Liste mit allen Dateien](ac24/ac24_total_list.txt), aufgeschlüsselt nach Ordnern | – | `ls -R > ../ac24/ac24_total_list.txt` (Mit WSL erstellt)
-Anzahl an `.gsm` Dateien | 2995 | `ls -R | grep '.gsm' | wc -l`
+Anzahl an `.gsm` Dateien | 2995 | `ls -R \| grep '.gsm' \| wc -l`
 Davon Makros: 1179 | = 39% | –
-Anzahl an Bildern | 1008 | `ls -R | grep '.jpg\|.png\|.tif' | wc -l`
-[Liste mit den 20 größten Dateien](ac24/ac24_biggest_files.txt) | – | `find . -type f -exec du -a {} + | sort -rn | head -n 20 > ../ac24/ac24_biggest_files.txt`
+Anzahl an Bildern | 1008 | `ls -R \\| grep '.jpg\\|.png\\|.tif' \\| wc -l`
+[Liste mit den 20 größten Dateien](ac24/ac24_biggest_files.txt) | – | `find . -type f -exec du -a {} + \| sort -rn \| head -n 20 > ../ac24/ac24_biggest_files.txt`
 
 4. Zuletzt konvertieren wir die `.gsm` Objekte noch ins [Hierarchical Source Format (HSF)](https://gdl.graphisoft.com/tips-and-tricks/hsf-source-format). Das funktioniert mit dem Befehl:
 
@@ -46,8 +46,8 @@ Beschreibung | • | Bash Befehl
 --- | --- | ---
 Haben alle Objekte Graphisoft als Autor? | Ja | `find . -name "libpartdocs.xml" -exec grep -i -E "<author>^(Graphisoft)" {} +`
 Sind alle Objekte unter CC BY lizensiert? | Ja | `find . -name "libpartdocs.xml" -exec grep -i -E "<type>^(CC BY)" {} +`
-[Die 10 längsten (LoC) GDL-Skripte](ac24/ac24_longest_scripts_1_objekte.txt) | – | `find . -name "*.gdl" -type f -print0 | xargs -0 wc -l | sort -rn | grep -v ' total$' |  head -n 10 > ../../ac24/ac24_longest_scripts_1_objekte.txt`
-Gesamtzahl Codelines | 3'479'962 | `find . -name "*.gdl" -type f -print0 | xargs -0 wc -l | sort -rn  | awk '/total/{k+=$1}END{print k}';`
+[Die 10 längsten (LoC) GDL-Skripte](ac24/ac24_longest_scripts_1_objekte.txt) | – | `find . -name "*.gdl" -type f -print0 \| xargs -0 wc -l \| sort -rn \| grep -v ' total$' \|  head -n 10 > ../../ac24/ac24_longest_scripts_1_objekte.txt`
+Gesamtzahl Codelines | 3'479'962 | `find . -name "*.gdl" -type f -print0 \| xargs -0 wc -l \| sort -rn  \| awk '/total/{k+=$1}END{print k}';`
 [Alle 'geCALLten' Makros](ac24/ac24_all_macro_calls.txt) | – | Siehe [getMacros.py](getMacros.py)
 Alle Parameter nach Häufigkeit, Typ, und Objektart sortiert | – | Siehe alle `.txt` Dateien beginnend mit `ac24/ac24_pars_…` // [getParameterNames.py](getParameterNames.py)
 [Alle verwendeten Stiftfarben](ac24/ac24_pencolors_1_objekte.txt) | - | Siehe [getPencolors.py](getPenColors.py)
