@@ -23,12 +23,12 @@ Erstaunlicherweise geht das recht flott vonstatten – trotz der **Größe des L
 
 Im Gegensatz zu Revit Familien basieren GDL Objekte rein auf Code und komprimieren dadurch recht gut.
 
-Beschreibung | • | Bash Befehl
+Beschreibung | • | Bash Befehl (Mit WSL erstellt)
 --- | --- | ---
-[Liste mit allen Dateien](ac24/ac24_total_list.txt), aufgeschlüsselt nach Ordnern | – | `ls -R > ../ac24/ac24_total_list.txt` (Mit WSL erstellt)
+[Liste mit allen Dateien](ac24/ac24_total_list.txt), aufgeschlüsselt nach Ordnern | – | `ls -R > ../ac24/ac24_total_list.txt`
 Anzahl an `.gsm` Dateien | 2995 | `ls -R \| grep '.gsm' \| wc -l`
-Davon Makros: 1179 | = 39% | –
-Anzahl an Bildern | 1008 | `ls -R \\| grep '.jpg\\|.png\\|.tif' \\| wc -l`
+Davon Makros | 1179 = 39% | –
+Anzahl an Bildern | 1008 | `ls -R \| grep '.jpg\\|.png\\|.tif' \| wc -l`
 [Liste mit den 20 größten Dateien](ac24/ac24_biggest_files.txt) | – | `find . -type f -exec du -a {} + \| sort -rn \| head -n 20 > ../ac24/ac24_biggest_files.txt`
 
 4. Zuletzt konvertieren wir die `.gsm` Objekte noch ins [Hierarchical Source Format (HSF)](https://gdl.graphisoft.com/tips-and-tricks/hsf-source-format). Das funktioniert mit dem Befehl:
