@@ -23,9 +23,9 @@ Erstaunlicherweise geht das recht flott vonstatten – trotz der **Größe des L
 
 Im Gegensatz zu Revit Familien basieren GDL Objekte rein auf Code und komprimieren dadurch recht gut.
 
-Beschreibung | • | Bash Befehl
+Beschreibung | • | Bash Befehl (Mit WSL erstellt)
 --- | --- | ---
-[Liste mit allen Dateien](ac24/ac24_total_list.txt), aufgeschlüsselt nach Ordnern | – | `ls -R > ../ac24/ac24_total_list.txt` (Mit WSL erstellt)
+[Liste mit allen Dateien](ac24/ac24_total_list.txt), aufgeschlüsselt nach Ordnern | – | `ls -R > ../ac24/ac24_total_list.txt`
 Anzahl an `.gsm` Dateien | 2995 | `ls -R \| grep '.gsm' \| wc -l`
 Davon Makros: 1179 | = 39% | –
 Anzahl an Bildern | 1008 | `ls -R \\| grep '.jpg\\|.png\\|.tif' \\| wc -l`
@@ -42,7 +42,7 @@ Dafür haben wir nun alle Archicad-Objekte und Makros im Plain-Text vor uns lieg
 
 Damit kann der Spaß beginnen:
 
-Beschreibung | • | Bash Befehl
+Beschreibung | • | Erläuterung
 --- | --- | ---
 Haben alle Objekte Graphisoft als Autor? | Ja | `find . -name "libpartdocs.xml" -exec grep -i -E "<author>^(Graphisoft)" {} +`
 Sind alle Objekte unter CC BY lizensiert? | Ja | `find . -name "libpartdocs.xml" -exec grep -i -E "<type>^(CC BY)" {} +`
@@ -51,6 +51,7 @@ Gesamtzahl Codelines | 3'479'962 | `find . -name "*.gdl" -type f -print0 \| xarg
 [Alle 'geCALLten' Makros](ac24/ac24_all_macro_calls.txt) | – | Siehe [getMacros.py](getMacros.py)
 Alle Parameter nach Häufigkeit, Typ, und Objektart sortiert | – | Siehe alle `.txt` Dateien beginnend mit `ac24/ac24_pars_…` // [getParameterNames.py](getParameterNames.py)
 [Alle verwendeten Stiftfarben](ac24/ac24_pencolors_1_objekte.txt) | - | Siehe [getPencolors.py](getPenColors.py)
+Meiste Parameter <br> [Vollständige Liste](ac24/ac24_parscount.txt) | 993 | `5-Flügelfenster 24`. Nur knapp an den maximal 1024 in GDL erlaubten Parametern vorbeigeschrammt. <br> Siehe [getParameterCount.py](getParameterCount.py)
 
 ---
 
