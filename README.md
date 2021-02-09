@@ -51,7 +51,7 @@ Gesamtzahl Codelines | 3'479'962 | `find . -name "*.gdl" -type f -print0 \| xarg
 [Alle 'geCALLten' Makros](ac24/ac24_all_macro_calls.txt) | – | Siehe [getMacros.py](getMacros.py)
 Alle Parameter nach Häufigkeit, Typ, und Objektart sortiert | – | Siehe alle `.txt` Dateien beginnend mit `ac24/ac24_pars_…` // [getParameterNames.py](getParameterNames.py)
 [Alle verwendeten Stiftfarben](ac24/ac24_pencolors_1_objekte.txt) | - | Siehe [getPencolors.py](getPenColors.py)
-Meiste Parameter <br> [Vollständige Liste](ac24/ac24_parscount.txt) | 993 | `5-Flügelfenster 24`. Nur knapp an den maximal 1024 in GDL erlaubten Parametern vorbeigeschrammt. <br> Siehe [getParameterCount.py](getParameterCount.py)
+Meiste Parameter <br> [Vollständige Liste](ac24/ac24_parscount.csv) | 993 | `5-Flügelfenster 24`. Nur knapp an den maximal 1024 in GDL erlaubten Parametern vorbeigeschrammt. <br> Siehe [getParameterCount.py](getParameterCount.py)
 
 ---
 

@@ -6,6 +6,7 @@ __author__ = "Lucas Becker"
 import os
 import time
 from lxml import etree
+import csv
 
 # Let's measure performance
 start_time = time.time()
@@ -63,11 +64,10 @@ parCount = list(scantree(PATH))
 
 parCountSorted = reversed(sorted(parCount, key=lambda x: x[1]))
 
-with open(os.path.join(pathToFile, 'ac24', 'ac24_parscount.txt'), 'w') as f:
-    f.write("Objekt\t\tAnzahl der Parameter\n")
-    f.write("=====================================\n")
-    for item in parCountSorted:
-        f.write(f"{item[0]}\t\t{item[1]}\n")
+with open(os.path.join(pathToFile, 'ac24', 'ac24_parscount.csv'), 'w', newline='') as f:
+    cw = csv.writer(f, delimiter=',')
+    cw.writerow(["Objekt", "Anzahl der Parameter"])
+    cw.writerows(parCountSorted)
 
 #-----------------------------------------------------------------------------#
 # perf time!
