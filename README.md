@@ -3,9 +3,9 @@
 Die von Graphisoft mitgelieferte Objektbibliothek erscheint selbst dem geneigten Anwender manchmal wie eine Black Box, in die man nicht hineinschauen kann. 
 Inspiriert durch die ursprüngliche Frage nach den in der Standard-Objektbibliothek von Archicad verwendeten Stiften im Folgenden eine kleine Übersicht:
 
-1. Zunächst mal schauen wir, wo die Standardbibliothek abgelegt ist. Diese ist dabei in einen Library Container zusammengepackt – ähnlich wie ein Zip-File.  
-Der Standardort in der deutschen Version ist `C:\Program Files\GRAPHISOFT\ARCHICAD 24\BIBLIOTHEKEN 24`. Darin liegt `Objektbibliotheken 24.lcf`. LCF ist das `Library Container Format`.
-2. Mit dem `LP_XMLConverter` können wir in einem ersten Schritt die LCf entpacken. Das Ergebnis wird eine Verzeichnisstruktur mit einzelnen `.gsm` Dateien sein, die der Ansicht innerhalb Archicads Objektwerkzeug entspricht. (Die Ausnahme ist jedoch, dass nicht alle Objekte platzierbar sind, sondern lediglich sogenannte Makros, oder weil es Türen/Fenster sind, die mit dem entsprechendem eigenen Werkzeug platziert werden).  
+1. Zunächst mal schauen wir, wo die Standardbibliothek abgelegt ist. Diese ist dabei in einem Library Container zusammengepackt – eine Datei ähnlich aufgebaut wie ein Zip-File.  
+Der Standardort in der deutschen Version ist `C:\Program Files\GRAPHISOFT\ARCHICAD XX\BIBLIOTHEKEN XX` (Wobei `XX` für die Versionsnummer steht). Darin liegt `Objektbibliotheken XX.lcf`. LCF ist das `Library Container Format`.
+2. Mit dem `LP_XMLConverter` können wir in einem ersten Schritt die LCF entpacken. Das Ergebnis wird eine Verzeichnisstruktur mit einzelnen `.gsm` Dateien sein, die der Ansicht innerhalb Archicads Objektwerkzeug entspricht. (Die Ausnahme ist jedoch, dass nicht alle Objekte platzierbar sind, sondern lediglich sogenannte Makros, oder weil es Türen/Fenster sind, die mit dem entsprechendem eigenen Werkzeug platziert werden).  
 Der Befehl für die Kommandozeile lautet
 ```bash
 $ LP_XMLConverter extractcontainer <lcf> <libraryFolder>
@@ -15,11 +15,11 @@ Erstaunlicherweise geht das recht flott vonstatten – trotz der **Größe des L
 
 3. Gegen die nun in Einzelobjekte zerlegte Bilbiothek lassen sich schon mal die ersten Statistiken fahren. Dafür analysiere ich die Ordner-/Dateistruktur mittels [WinDirStat](https://sourceforge.net/projects/windirstat/):
 
-![](img/windirstat_24_overview.png)
+![Übersicht](img/windirstat_24_overview.png)
 
-![](img/windirstat_24_filetypes.png)
+![Augeschlüsselt nach Dateitypen](img/windirstat_24_filetypes.png)
 
-![](img/windirstat_24_bubbleview.png)
+![Bubbleview](img/windirstat_24_bubbleview.png)
 
 Im Gegensatz zu Revit Familien basieren GDL Objekte rein auf Code und komprimieren dadurch recht gut.
 
@@ -52,6 +52,11 @@ Gesamtzahl Codelines | 3'479'962 | `find . -name "*.gdl" -type f -print0 \| xarg
 Alle Parameter nach Häufigkeit, Typ, und Objektart sortiert | – | Siehe alle `.txt` Dateien beginnend mit `ac24/ac24_pars_…` // [getParameterNames.py](getParameterNames.py)
 [Alle verwendeten Stiftfarben](ac24/ac24_pencolors_1_objekte.txt) | - | Siehe [getPencolors.py](getPenColors.py)
 Meiste Parameter <br> [Vollständige Liste](ac24/ac24_parscount.csv) | 993 | `5-Flügelfenster 24`. Nur knapp an den maximal 1024 in GDL erlaubten Parametern vorbeigeschrammt. <br> Siehe [getParameterCount.py](getParameterCount.py)
+
+
+### Unterschiede Deutsche ↔ Schweizerische Bibliothek
+Mit [diesem Skript](compareLibContents.py) lassen sich die Unterschiede zwischen zwei Bibliotheken auflisten. In diesem Fall habe ich die deutsche Bibliothek mit der [Schweizerischen](ac24_che/ac24_che_total_list.txt) verglichen (beide Version 24).  
+Dort entstehen gleichsam mehr Unterschiede als gedacht, jedoch sind bei näherer Betrachtung einige der Objekte in der Liste False Positives: Oftmals ist nur die Schreibweise unterschiedlich (Vgl. "Einbaukamin" ([CHE](ac24_che/ac24_diff_inCHE.txt)) und "Einbau Kamin" – nur echt mit Deppenleerzeichen in [DE](ac24_che/ac24_diff_inGer.txt)), oder aber das Objekt umbenannt, der Inhalt trotzdem der gleiche.
 
 ---
 
