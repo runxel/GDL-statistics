@@ -56,7 +56,7 @@ Meiste Parameter <br> [Vollständige Liste](ac24/ac24_parscount.csv) | 993 | `5-
 
 ### Unterschiede Deutsche ↔ Schweizerische Bibliothek
 Mit [diesem Skript](compareLibContents.py) lassen sich die Unterschiede zwischen zwei Bibliotheken auflisten. In diesem Fall habe ich die deutsche Bibliothek mit der [Schweizerischen](ac24_che/ac24_che_total_list.txt) verglichen (beide Version 24).  
-Dort entstehen gleichsam mehr Unterschiede als gedacht, jedoch sind bei näherer Betrachtung einige der Objekte in der Liste False Positives: Oftmals ist nur die Schreibweise unterschiedlich (Vgl. "Einbaukamin" ([CHE](ac24_che/ac24_diff_inCHE.txt)) und "Einbau Kamin" – nur echt mit Deppenleerzeichen in [DE](ac24_che/ac24_diff_inGer.txt)), oder aber das Objekt umbenannt, der Inhalt trotzdem der gleiche.
+Dort entstehen gleichsam mehr Unterschiede als gedacht, jedoch sind bei näherer Betrachtung einige der Objekte in der Liste False Positives: Oftmals ist nur die Schreibweise unterschiedlich (Vgl. "Einbaukamin" ([CHE](ac24_che/ac24_diff_inCHE.txt)) und "Einbau Kamin" – nur echt mit Deppenleerzeichen in [DE](ac24_che/ac24_diff_inGER.txt)), oder aber das Objekt umbenannt, der Inhalt trotzdem der gleiche.
 
 ---
 
